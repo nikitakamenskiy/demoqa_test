@@ -27,7 +27,7 @@ public class FirstJUnitTest {
 
     @Test
     void  firstTest() {
-        System.out.println("  Это firstTes");
+        System.out.println("  Это firstTest");
         Assertions.assertTrue(3 > 2);
     }
 
