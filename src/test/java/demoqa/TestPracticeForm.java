@@ -15,7 +15,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class TestPracticeForm {
 
     @BeforeAll
-    static void beforAll(){
+    static void beforAll() {
         Configuration.browserSize = "1920x1080";
         Configuration.baseUrl = "https://demoqa.com";
     }
@@ -46,7 +46,7 @@ public class TestPracticeForm {
         $("#subjectsInput").setValue(Subjects).pressEnter();
         $("label[for='hobbies-checkbox-1']").click();
         $("label[for='hobbies-checkbox-2']").click();
-        $("#uploadPicture").uploadFile(new File("src/test/java/demoqa/resources/" +nameFile));
+        $("#uploadPicture").uploadFile(new File("src/test/java/demoqa/resources/" + nameFile));
         $("#currentAddress").setValue(currentAddress);
         $("#state").click();
         $("#react-select-3-option-0").click();
@@ -61,27 +61,9 @@ public class TestPracticeForm {
         $(".table").$(new ByText("Mobile")).sibling(0).shouldHave(text(Mobile));
         // Date of Birth
         $(".table").$(new ByText("Subjects")).sibling(0).shouldHave(text(Subjects));
-       // доделать Hobbies
+        // доделать Hobbies
         $(".table").$(new ByText("Picture")).sibling(0).shouldHave(text(nameFile));
         $(".table").$(new ByText("Address")).sibling(0).shouldHave(text(currentAddress));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     }
