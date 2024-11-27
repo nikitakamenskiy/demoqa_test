@@ -14,7 +14,7 @@ import static com.codeborne.selenide.Selenide.*;
 public class RegistrationPages {
     private  CalendarComponent calendarComponent = new CalendarComponent();
     private final String TITLE_TEXT = "Student Registration Form";
-    private final String IMG_FOLDER = "img/";
+    private final String IMG_FOLDER = "image/";
     private SelenideElement
 
     firtNameInput = $("#firstName"),
@@ -87,7 +87,7 @@ public class RegistrationPages {
     }
 
     public RegistrationPages setPicture(String value){
-        pictureUpload.uploadFromClasspath(IMG_FOLDER + value);
+        pictureUpload.uploadFromClasspath("img/img.jpg");
         return this;
     }
 
