@@ -13,6 +13,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class RegistrationPages {
     private  CalendarComponent calendarComponent = new CalendarComponent();
+    private RegistrationResultsModal registrationResultsModal = new RegistrationResultsModal();
     private final String TITLE_TEXT = "Student Registration Form";
     private final String IMG_FOLDER = "image/";
     private SelenideElement
@@ -119,6 +120,15 @@ public class RegistrationPages {
     public RegistrationPages submit () {
         submitButton.click();
 
+        return this;
+    }
+    public RegistrationPages verifyResultsModalAppears() {
+        registrationResultsModal.verifyModalAppears();
+        return this;
+    }
+
+    public RegistrationPages verifyResult(String key, String value) {
+        registrationResultsModal.verifyResult(key, value);
         return this;
     }
 
